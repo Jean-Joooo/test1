@@ -1,0 +1,89 @@
+index.html
+ head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    style
+       responsive styles 
+      @media (max-width 767px) {
+         styles for smartphones 
+        .container {
+          width 100%;
+          padding 0 15px;
+        }
+      }
+
+      @media (min-width 768px) and (max-width 991px) {
+         styles for tablets 
+        .container {
+          width 750px;
+          margin 0 auto;
+        }
+      }
+
+      @media (min-width 992px) {
+         styles for computers 
+        .container {
+          width 970px;
+          margin 0 auto;
+        }
+      }
+
+       common styles 
+      .container {
+        padding-top 20px;
+      }
+
+       chat box styles 
+      .chat-box {
+        background-color #f5f5f5;
+        border 1px solid #ddd;
+        border-radius 4px;
+        padding 20px;
+      }
+
+       user input styles 
+      .user-input {
+        width 100%;
+        border 1px solid #ddd;
+        border-radius 4px;
+        padding 10px;
+        margin-top 20px;
+      }
+
+       submit button styles 
+      .submit-btn {
+        background-color #4CAF50;
+        color white;
+        border none;
+        border-radius 4px;
+        padding 10px 20px;
+        cursor pointer;
+        float right;
+        margin-top 20px;
+      }
+    style
+  head
+  body
+    div class=container
+      div class=chat-box
+        pWelcome to the chat room! How can I help you todayp
+        div class=user-input
+          input type=text id=user-message
+        div
+        button class=submit-btn onclick=submitMessage()Submitbutton
+      div
+    div
+    script
+      function submitMessage() {
+         retrieve user input
+        const userMessage = document.getElementById(user-message).value;
+
+         make API call to OpenAI's GPT-3
+         ...
+
+         display response in chat box
+         ...
+      }
+    script
+  body
+html
